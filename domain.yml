@@ -9,6 +9,7 @@ intents:
   - mood_unhappy
   - bot_challenge
   - inform
+  - travel
 #  - choose_country
 #  - inform_amount
 
@@ -16,7 +17,7 @@ intents:
 entities:
   - origin_country
   - destiny_country
-  - origin_coin
+#  - origin_coin
 
 slots:
   origin_country:
@@ -27,12 +28,12 @@ slots:
         entity: origin_country
 
   # ver se é text ou float
-  origin_coin:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: origin_coin
+#  origin_coin:
+#    type: text
+#    influence_conversation: true
+#    mappings:
+#      - type: from_entity
+#        entity: origin_coin
 
   destiny_country:
     type: text
@@ -54,12 +55,16 @@ forms:
     required_slots:
       - origin_country
       - destiny_country
-      - origin_coin
+#      - origin_coin
 
 responses:
   utter_greet:
     - text: "ei! como vai você?"
     - text: "olá"
+
+  utter_travel:
+    - text: "ei que bom!"
+    - text: "boa, por favor responda as próximas perguntas: "
 
   utter_ask_origin_country:
     - text: "Qual país você está?"
@@ -67,8 +72,8 @@ responses:
   utter_ask_destiny_country:
     - text: "Para qual país deseja ir?"
 
-  utter_ask_origin_coin:
-    - text: "Escreva a quantidade de dinheiro que deseja converter:"
+#  utter_ask_origin_coin:
+#    - text: "Escreva a quantidade de dinheiro que deseja converter:"
 
   utter_cheer_up:
     - text: "Here is something to cheer you up:"

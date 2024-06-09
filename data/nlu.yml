@@ -14,6 +14,16 @@ nlu:
       - ei cara
       - iae
 
+
+  - intent: travel
+    examples: |
+      - quero viajar
+      - viajar
+      - vou sair para outro pais
+      - quero ir para outro pais
+      - quero sair do pais
+
+
   - intent: inform
     examples: |
       - [brasil](origin_country)
@@ -24,12 +34,12 @@ nlu:
       - chegar no [japao](destiny_country)
       - visitar o [japao](destiny_country)
       - [japao](destiny_country)
-      - quanto da [400](origin_coin)
-      - quanto e [400](origin_coin)
-      - quero [400](origin_coin)
-      - quero converter [400](origin_coin)
-      - converta esse valor [400](origin_coin)
-      - [400](origin_coin)
+#      - quanto da [400](origin_coin)
+#      - quanto e [400](origin_coin)
+#      - quero [400](origin_coin)
+#      - quero converter [400](origin_coin)
+#      - converta esse valor [400](origin_coin)
+#      - [400](origin_coin)
 
   # - intent: choose_country_brasil
     # examples: |

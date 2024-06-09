@@ -14,7 +14,8 @@ rules:
 
   - rule: activate form loop
     steps:
-      - intent: mood_great
+      - intent: travel
+      - action: utter_travel
       - action: simple_form
       - active_loop: simple_form
 
