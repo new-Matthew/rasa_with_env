@@ -8,48 +8,87 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - repeat_phone
-  - phone
+  - inform
+#  - choose_country
+#  - inform_amount
 
+# origin_coin ou money_to_convert
 entities:
-  - number
+  - origin_country
+  - destiny_country
+  - origin_coin
 
 slots:
-  phone:
+  origin_country:
     type: text
     influence_conversation: true
     mappings:
-    - type: from_entity
-      entity: number
+      - type: from_entity
+        entity: origin_country
+
+  # ver se é text ou float
+  origin_coin:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: origin_coin
+
+  destiny_country:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: destiny_country
+
+  # valor calculado pelo bot
+  #destiny_coin:
+  #  type: text
+  #  influence_conversation: true
+  #  mappings:
+  #    - type: from_entity
+  #      entity: number
+
+forms:
+  simple_form:
+    required_slots:
+      - origin_country
+      - destiny_country
+      - origin_coin
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-  - text: "ai dento baitola"
+    - text: "ei! como vai você?"
+    - text: "olá"
 
+  utter_ask_origin_country:
+    - text: "Qual país você está?"
 
-  utter_ask_phone:
-  - text: "Escreva seu número de telefone por favor?"
+  utter_ask_destiny_country:
+    - text: "Para qual país deseja ir?"
+
+  utter_ask_origin_coin:
+    - text: "Escreva a quantidade de dinheiro que deseja converter:"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+    - text: "Did that help you?"
 
   utter_happy:
-  - text: "Great, carry on!"
+    - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "Bye"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: "I am a bot, powered by Rasa."
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 
 actions:
-- action_say_phone
+  - action_say_data

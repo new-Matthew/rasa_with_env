@@ -1,108 +1,111 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-    - abcd
+  - intent: greet
+    examples: |
+      - ei
+      - olá
+      - oi
+      - ola
+      - bom dia
+      - boa tarde
+      - boa noite
+      - ei você
+      - ei cara
+      - iae
 
-- intent: phone
-  examples: |
-    - [40028922](number)
-    - este é meu telefone [40028922](number)
-    - meu número de celular é esse [40028922](number)
-    - aqui está meu telefone [40028922](number)
-    - voce pode repetir meu telefone
+  - intent: inform
+    examples: |
+      - [brasil](origin_country)
+      - estou no [brasil](origin_country)
+      - to no [brasil](origin_country)
+      - saindo do [brasil](origin_country)
+      - quero ir para o [japao](destiny_country)
+      - chegar no [japao](destiny_country)
+      - visitar o [japao](destiny_country)
+      - [japao](destiny_country)
+      - quanto da [400](origin_coin)
+      - quanto e [400](origin_coin)
+      - quero [400](origin_coin)
+      - quero converter [400](origin_coin)
+      - converta esse valor [400](origin_coin)
+      - [400](origin_coin)
 
-- intent: repeat_phone
-  examples: |
-    - qual meu número de telefone
-    - me de o número do meu telefone
-    - lembre meu telefone
-    - voce pode repetir meu telefone
-    - meu telefone é?
+  # - intent: choose_country_brasil
+    # examples: |
+      # - quero ir para o brasil
+      # - japao
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+  # - intent: choose_country_japao
+    # examples: |
+      # - quero ir para o japao
+      # - japao
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  # - intent: inform_amount
+    # examples: |
+      # - quanto da [400](origin_coin)
+      # - quanto e [400](origin_coin)
+      # - quero [400](origin_coin)
+      # - converta esse valor [400](origin_coin)
+      # - quero converter [400](origin_coin)
+      # - Quero converter [200](origin_coin) reais ver como faz pra setar dolar, euro yen etc., no # final da frase.
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+  - intent: goodbye
+    examples: |
+      - adeus
+      - xau
+      - vejo voce depois
+      - te vejo mais tarde
+      - tchau
+      - flw
+      - tenha um bom dia
+      - te vejo por ai
+      - ate mais ver
+      - te vejo depois
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+  - intent: affirm
+    examples: |
+      - sim
+      - s
+      - de fato
+      - claro
+      - com certeza
+      - muito bom
+      - correto
+      - isso mesmo
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+  - intent: deny
+    examples: |
+      - nao
+      - n
+      - nao e isso
+      - acho que nao
+      - errado
+      - nem
+      - nada
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: mood_great
+    examples: |
+      - perfeito
+      - bom
+      - incrivel
+      - estou me sentindo um rei
+      - maravilhoso
+
+  - intent: mood_unhappy
+    examples: |
+      - meu dia foi horrível
+      - estou triste
+      - não me sinto muito bem
+      - estou desapontado
+      - triste
+      - acabado
+      - paia
+      - muito triste
+
+  - intent: bot_challenge
+    examples: |
+      - vc eh humano?
+      - você é humano?
+      - você é um robô?
+      - estou falando com um robô?

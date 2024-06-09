@@ -2,17 +2,6 @@ version: "3.1"
 
 stories:
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_ask_phone
-  - intent: phone
-    entities:
-    - number: 40028922
-  - slot_was_set:
-    - phone: 40028922
-  - action: action_say_phone
-
 - story: sad path 1
   steps:
   - intent: greet

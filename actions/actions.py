@@ -13,20 +13,24 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
 
-class Action_say_phone(Action):
+class ActionSayData(Action):
 
      def name(self) -> Text:
-         return "action_say_phone"
+         return "action_say_data"
 
      def run(self, dispatcher: CollectingDispatcher,
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
          
-         phone = tracker.get_slot("phone")
+         origin_country = tracker.get_slot("origin_country")
+         destiny_country = tracker.get_slot("destiny_country")
+         origin_coin = tracker.get_slot("money_to_convert")
 
-         if not phone:
-             dispatcher.utter_message(text="Desculpe nao sei seu numero de telefone")
-         else:
-             dispatcher.utter_message(text=f"seu número de telefone é: {phone}")
+         dispatcher.utter_message(text=f"seu país de origem é {origin_country}, seu país de destino é {destiny_country}, com {origin_coin} você obtém destiny_coin ")
 
          return []
+     
+#     if not phone:
+#             dispatcher.utter_message(text="Desculpe nao sei seu numero de telefone")
+#         else:
+#             dispatcher.utter_message(text=f"seu número de telefone é: {phone}")
