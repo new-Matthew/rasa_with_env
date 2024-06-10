@@ -24,16 +24,21 @@ nlu:
       - quero sair do pais
 
 
-  - intent: inform
+  - intent: inform_origin_country
     examples: |
       - [brasil](origin_country)
-      - estou no [brasil](origin_country)
-      - to no [brasil](origin_country)
-      - saindo do [brasil](origin_country)
-      - quero ir para o [japao](destiny_country)
+      - estou no [alemanha](origin_country)
+      - to no [eua](origin_country)
+      - saindo do [japao](origin_country)
+
+  - intent: inform_destiny_country
+    examples: |
+      - quero ir para o [Canada](destiny_country)
       - chegar no [japao](destiny_country)
-      - visitar o [japao](destiny_country)
-      - [japao](destiny_country)
+      - visitar a [frança](destiny_country)
+      - [brasil](destiny_country)
+
+      
 #      - quanto da [400](origin_coin)
 #      - quanto e [400](origin_coin)
 #      - quero [400](origin_coin)

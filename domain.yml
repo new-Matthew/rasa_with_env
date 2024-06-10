@@ -8,8 +8,10 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - inform
+  - inform_origin_country
+  - inform_destiny_country
   - travel
+
 #  - choose_country
 #  - inform_amount
 
@@ -22,10 +24,17 @@ entities:
 slots:
   origin_country:
     type: text
-    influence_conversation: true
+    influence_conversation: false
     mappings:
       - type: from_entity
         entity: origin_country
+
+  destiny_country:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: destiny_country
 
   # ver se é text ou float
 #  origin_coin:
@@ -34,13 +43,6 @@ slots:
 #    mappings:
 #      - type: from_entity
 #        entity: origin_coin
-
-  destiny_country:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: destiny_country
 
   # valor calculado pelo bot
   #destiny_coin:
@@ -55,6 +57,7 @@ forms:
     required_slots:
       - origin_country
       - destiny_country
+
 #      - origin_coin
 
 responses:
@@ -63,7 +66,7 @@ responses:
     - text: "olá"
 
   utter_travel:
-    - text: "ei que bom!"
+    - text: "ei que bom, agora responda algumas perguntas para mim poder te ajudar melhor: "
     - text: "boa, por favor responda as próximas perguntas: "
 
   utter_ask_origin_country:
@@ -76,24 +79,24 @@ responses:
 #    - text: "Escreva a quantidade de dinheiro que deseja converter:"
 
   utter_cheer_up:
-    - text: "Here is something to cheer you up:"
+    - text: "Aqui algo para te animar:"
       image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-    - text: "Did that help you?"
+    - text: "Isso ajudou você?"
 
   utter_happy:
-    - text: "Great, carry on!"
+    - text: "Boa, continue!"
 
   utter_goodbye:
-    - text: "Bye"
+    - text: "até logo"
 
   utter_iamabot:
-    - text: "I am a bot, powered by Rasa."
+    - text: "Sou um bot feito pela Rasa."
 
 session_config:
   session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  carry_over_slots_to_new_session: false
 
 actions:
-  - action_say_data
+  - action_travel_info
