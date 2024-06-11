@@ -1,50 +1,130 @@
 version: "3.1"
 
 nlu:
-  - intent: greet
-    examples: |
-      - ei
-      - olá
-      - oi
-      - ola
-      - bom dia
-      - boa tarde
-      - boa noite
-      - ei você
-      - ei cara
-      - iae
+- intent: greet
+  examples: |
+    - ei
+    - olá
+    - oi
+    - olá
+    - bom dia
+    - boa noite
+    - mais
+    - ei
+    - vamos
+    - ei cara
+    - bom dia
+    - boa noite
+    - boa tarde
 
+- intent: goodbye
+  examples: |
+    - cu
+    - bom por
+    - te vejo mais tarde
+    - boa noite
+    - tchau
+    - adeus
+    - tenha um bom dia
+    - Vejo você por aí
+    - Bye Bye
+    - até mais
 
-  - intent: travel
-    examples: |
-      - quero viajar
-      - viajar
-      - vou sair para outro pais
-      - quero ir para outro pais
-      - quero sair do pais
+- intent: affirm
+  examples: |
+    - sim
+    - sim
+    - de fato
+    - claro
+    - Isso soa bem
+    - correto
 
+- intent: deny
+  examples: |
+    - não
+    - n
+    - nunca
+    - Eu não acho
+    - não gosto disso
+    - sem chance
+    - na verdade
 
-  - intent: inform_origin_country
-    examples: |
-      - [brasil](origin_country)
-      - estou no [alemanha](origin_country)
-      - to no [eua](origin_country)
-      - saindo do [japao](origin_country)
+- intent: mood_great
+  examples: |
+    - perfeito
+    - ótimo
+    - incrível
+    - me sentindo um rei
+    - maravilhoso
+    - Estou me sentindo muito bem
+    - Estou estou ótimo
+    - Eu sou incrível
+    - Eu vou salvar o mundo
+    - super feliz
+    - extremamente bom
+    - tão perfeito
+    - tão bom
+    - tão perfeito
 
-  - intent: inform_destiny_country
-    examples: |
-      - quero ir para o [Canada](destiny_country)
-      - chegar no [japao](destiny_country)
-      - visitar a [frança](destiny_country)
-      - [brasil](destiny_country)
+- intent: mood_unhappy
+  examples: |
+    - meu dia foi horrível
+    - Estou triste
+    - Não me sinto muito bem
+    - Estou desapontado
+    - super triste
+    - Eu estou tão triste
+    - triste
+    - muito triste
+    - infeliz
+    - não é bom
+    - não muito bom
+    - extremamente triste
+    - tão triste
+    - tão triste
 
-      
-#      - quanto da [400](origin_coin)
-#      - quanto e [400](origin_coin)
-#      - quero [400](origin_coin)
-#      - quero converter [400](origin_coin)
-#      - converta esse valor [400](origin_coin)
-#      - [400](origin_coin)
+- intent: bot_challenge
+  examples: |
+    - Você é um robô?
+    - Você é um humano?
+    - estou falando com um bot?
+    - estou falando com um humano?
+
+- intent: hello
+  examples: |
+    - hello
+    - world
+
+- intent: travel
+  examples: |
+    - quero viajar
+    - viajar
+    - vou sair para outro pais
+    - quero ir para outro pais
+    - quero sair do pais
+
+- intent: inform_origin_country
+  examples: |
+    - [brasil](origin_country)
+    - estou no [alemanha](origin_country)
+    - to no [eua](origin_country)
+    - saindo do [paraguai](origin_country)
+
+- intent: inform_destiny_country
+  examples: |
+    - quero ir para o [Canada](destiny_country)
+    - chegar no [japao](destiny_country)
+    - visitar a [frança](destiny_country)
+    - [cuba](destiny_country)
+
+- intent: inform_origin_coin
+  examples: |
+    - quanto da [400](origin_coin)
+    - quanto e [400](origin_coin)
+    - quero [400](origin_coin)
+    - quero converter [400](origin_coin)
+    - converta esse valor [400](origin_coin)
+    - [400](origin_coin)
 
   # - intent: choose_country_brasil
     # examples: |
@@ -64,63 +144,3 @@ nlu:
       # - converta esse valor [400](origin_coin)
       # - quero converter [400](origin_coin)
       # - Quero converter [200](origin_coin) reais ver como faz pra setar dolar, euro yen etc., no # final da frase.
-
-  - intent: goodbye
-    examples: |
-      - adeus
-      - xau
-      - vejo voce depois
-      - te vejo mais tarde
-      - tchau
-      - flw
-      - tenha um bom dia
-      - te vejo por ai
-      - ate mais ver
-      - te vejo depois
-
-  - intent: affirm
-    examples: |
-      - sim
-      - s
-      - de fato
-      - claro
-      - com certeza
-      - muito bom
-      - correto
-      - isso mesmo
-
-  - intent: deny
-    examples: |
-      - nao
-      - n
-      - nao e isso
-      - acho que nao
-      - errado
-      - nem
-      - nada
-
-  - intent: mood_great
-    examples: |
-      - perfeito
-      - bom
-      - incrivel
-      - estou me sentindo um rei
-      - maravilhoso
-
-  - intent: mood_unhappy
-    examples: |
-      - meu dia foi horrível
-      - estou triste
-      - não me sinto muito bem
-      - estou desapontado
-      - triste
-      - acabado
-      - paia
-      - muito triste
-
-  - intent: bot_challenge
-    examples: |
-      - vc eh humano?
-      - você é humano?
-      - você é um robô?
-      - estou falando com um robô?

@@ -15,7 +15,7 @@ rules:
   - rule: activate form loop
     steps:
       - intent: travel
-      - action: utter_travel
+#      - action: utter_travel
       - action: simple_form
       - active_loop: simple_form
 

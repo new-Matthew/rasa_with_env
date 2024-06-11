@@ -8,18 +8,16 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - hello
+  - travel
   - inform_origin_country
   - inform_destiny_country
-  - travel
+  - inform_origin_coin
 
-#  - choose_country
-#  - inform_amount
-
-# origin_coin ou money_to_convert
 entities:
   - origin_country
   - destiny_country
-#  - origin_coin
+  - origin_coin
 
 slots:
   origin_country:
@@ -35,6 +33,65 @@ slots:
     mappings:
       - type: from_entity
         entity: destiny_country
+  
+  origin_coin:
+    type: float
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: origin_coin
+
+forms:
+  simple_form:
+    required_slots:
+      - origin_country
+      - destiny_country
+      - origin_coin
+      
+responses:
+  utter_greet:
+  - text: "Olá, como vai!"
+
+  utter_cheer_up:
+  - text: "Aqui está algo para animá-lo:"
+    image: "https://imgur.com/vt8SBiE"
+
+  utter_did_that_help:
+  - text: "Isso ajudou você?"
+
+  utter_happy:
+  - text: "Ótimo, continue!"
+
+  utter_goodbye:
+  - text: "Tchau"
+
+  utter_iamabot:
+  - text: "Eu sou um bot, desenvolvido pela Rasa."
+
+  #utter_travel:
+  #  - text: "ei que bom, agora responda algumas perguntas para mim poder te ajudar melhor: "
+  #  - text: "boa, por favor responda as próximas perguntas: "
+
+  utter_ask_origin_country:
+    - text: "Qual país você está?"
+
+  utter_ask_destiny_country:
+    - text: "Para qual país deseja ir?"
+
+  utter_ask_origin_coin:
+    - text: "Escreva a quantidade de dinheiro que deseja converter:"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
+
+actions:
+  - action_hello_world
+  - action_travel_info
+
+
+
+
 
   # ver se é text ou float
 #  origin_coin:
@@ -52,51 +109,7 @@ slots:
   #    - type: from_entity
   #      entity: number
 
-forms:
-  simple_form:
-    required_slots:
-      - origin_country
-      - destiny_country
-
 #      - origin_coin
 
-responses:
-  utter_greet:
-    - text: "ei! como vai você?"
-    - text: "olá"
 
-  utter_travel:
-    - text: "ei que bom, agora responda algumas perguntas para mim poder te ajudar melhor: "
-    - text: "boa, por favor responda as próximas perguntas: "
 
-  utter_ask_origin_country:
-    - text: "Qual país você está?"
-
-  utter_ask_destiny_country:
-    - text: "Para qual país deseja ir?"
-
-#  utter_ask_origin_coin:
-#    - text: "Escreva a quantidade de dinheiro que deseja converter:"
-
-  utter_cheer_up:
-    - text: "Aqui algo para te animar:"
-      image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-    - text: "Isso ajudou você?"
-
-  utter_happy:
-    - text: "Boa, continue!"
-
-  utter_goodbye:
-    - text: "até logo"
-
-  utter_iamabot:
-    - text: "Sou um bot feito pela Rasa."
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: false
-
-actions:
-  - action_travel_info

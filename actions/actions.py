@@ -12,8 +12,22 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
+from rasa_sdk.events import AllSlotsReset, SlotSet
 
-class ActionSayData(Action):
+class ActionHelloWorld(Action):
+
+    def name(self) -> Text:
+        return "action_hello_world"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(text="Hello World!")
+
+        return []
+
+class ActionTravelInfo(Action):
 
      def name(self) -> Text:
          return "action_travel_info"
@@ -24,11 +38,11 @@ class ActionSayData(Action):
          
          origin_country = tracker.get_slot("origin_country")
          destiny_country = tracker.get_slot("destiny_country")
-#         origin_coin = tracker.get_slot("money_to_convert")
+         origin_coin = tracker.get_slot("origin_coin")
 
-         dispatcher.utter_message(text=f"seu país de origem é {origin_country}, seu país de destino é {destiny_country}, com @origin_coin você consegue comprar @destiny_coin (sem taxas de câmbio inclusas) ")
+         dispatcher.utter_message(text=f"seu país de origem é {origin_country}, seu país de destino é {destiny_country}, com {origin_coin} você consegue comprar @destiny_coin (sem taxas de câmbio inclusas) ")
 
-         return []
+         return [AllSlotsReset(), SlotSet("requested_slot", "origin_country")]
      
 #     if not phone:
 #             dispatcher.utter_message(text="Desculpe nao sei seu numero de telefone")
