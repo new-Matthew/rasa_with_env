@@ -1,146 +1,147 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - ei
-    - olá
-    - oi
-    - olá
-    - bom dia
-    - boa noite
-    - mais
-    - ei
-    - vamos
-    - ei cara
-    - bom dia
-    - boa noite
-    - boa tarde
+  - intent: greet
+    examples: |
+      - ei
+      - olá
+      - oi
+      - olá
+      - bom dia
+      - boa noite
+      - mais
+      - ei
+      - vamos
+      - ei cara
+      - bom dia
+      - boa noite
+      - boa tarde
 
-- intent: goodbye
-  examples: |
-    - cu
-    - bom por
-    - te vejo mais tarde
-    - boa noite
-    - tchau
-    - adeus
-    - tenha um bom dia
-    - Vejo você por aí
-    - Bye Bye
-    - até mais
+  - intent: goodbye
+    examples: |
+      - cu
+      - bom por
+      - te vejo mais tarde
+      - boa noite
+      - tchau
+      - adeus
+      - tenha um bom dia
+      - vejo você por aí
+      - bye bye
+      - até mais
 
-- intent: affirm
-  examples: |
-    - sim
-    - sim
-    - de fato
-    - claro
-    - Isso soa bem
-    - correto
+  - intent: affirm
+    examples: |
+      - sim
+      - sim
+      - de fato
+      - claro
+      - isso soa bem
+      - correto
 
-- intent: deny
-  examples: |
-    - não
-    - n
-    - nunca
-    - Eu não acho
-    - não gosto disso
-    - sem chance
-    - na verdade
+  - intent: deny
+    examples: |
+      - não
+      - n
+      - nunca
+      - eu não acho
+      - não gosto disso
+      - sem chance
+      - na verdade
 
-- intent: mood_great
-  examples: |
-    - perfeito
-    - ótimo
-    - incrível
-    - me sentindo um rei
-    - maravilhoso
-    - Estou me sentindo muito bem
-    - Estou estou ótimo
-    - Eu sou incrível
-    - Eu vou salvar o mundo
-    - super feliz
-    - extremamente bom
-    - tão perfeito
-    - tão bom
-    - tão perfeito
+  - intent: mood_great
+    examples: |
+      - perfeito
+      - ótimo
+      - incrível
+      - me sentindo um rei
+      - maravilhoso
+      - estou me sentindo muito bem
+      - estou ótimo
+      - eu sou incrível
+      - eu vou salvar o mundo
+      - super feliz
+      - extremamente bom
+      - tão perfeito
+      - tão bom
+      - tão perfeito
 
-- intent: mood_unhappy
-  examples: |
-    - meu dia foi horrível
-    - Estou triste
-    - Não me sinto muito bem
-    - Estou desapontado
-    - super triste
-    - Eu estou tão triste
-    - triste
-    - muito triste
-    - infeliz
-    - não é bom
-    - não muito bom
-    - extremamente triste
-    - tão triste
-    - tão triste
+  - intent: mood_unhappy
+    examples: |
+      - meu dia foi horrível
+      - estou triste
+      - não me sinto muito bem
+      - estou desapontado
+      - super triste
+      - eu estou tão triste
+      - triste
+      - muito triste
+      - infeliz
+      - não é bom
+      - não muito bom
+      - extremamente triste
+      - tão triste
+      - tão triste
 
-- intent: bot_challenge
-  examples: |
-    - Você é um robô?
-    - Você é um humano?
-    - estou falando com um bot?
-    - estou falando com um humano?
+  - intent: bot_challenge
+    examples: |
+      - você é um robô?
+      - você é um humano?
+      - estou falando com um bot?
+      - estou falando com um humano?
 
-- intent: hello
-  examples: |
-    - hello
-    - world
+  - intent: hello
+    examples: |
+      - hello
+      - world
 
-- intent: travel
-  examples: |
-    - quero viajar
-    - viajar
-    - vou sair para outro pais
-    - quero ir para outro pais
-    - quero sair do pais
+  - intent: travel
+    examples: |
+      - quero viajar
+      - viajar
+      - vou sair para outro país
+      - quero ir para outro país
+      - quero sair do país
 
-- intent: inform_origin_country
-  examples: |
-    - [brasil](origin_country)
-    - estou no [alemanha](origin_country)
-    - to no [eua](origin_country)
-    - saindo do [paraguai](origin_country)
+  - intent: inform_origin_country
+    examples: |
+      - [brasil](origin_country)
+      - estou na [alemanha](origin_country)
+      - estou nos [eua](origin_country)
+      - saindo do [paraguai](origin_country)
 
-- intent: inform_destiny_country
-  examples: |
-    - quero ir para o [Canada](destiny_country)
-    - chegar no [japao](destiny_country)
-    - visitar a [frança](destiny_country)
-    - [cuba](destiny_country)
+  - intent: inform_destiny_country
+    examples: |
+      - quero ir para o [canadá](destiny_country)
+      - chegar no [japão](destiny_country)
+      - visitar a [frança](destiny_country)
+      - [cuba](destiny_country)
 
-- intent: inform_origin_coin
-  examples: |
-    - quanto da [400](origin_coin)
-    - quanto e [400](origin_coin)
-    - quero [400](origin_coin)
-    - quero converter [400](origin_coin)
-    - converta esse valor [400](origin_coin)
-    - [400](origin_coin)
+  - intent: inform_origin_coin
+    examples: |
+      - quanto dá [400](origin_coin)
+      - quanto é [400](origin_coin)
+      - quero [400](origin_coin)
+      - quero converter [400](origin_coin)
+      - converta esse valor [400](origin_coin)
+      - [400](origin_coin)
 
-  # - intent: choose_country_brasil
-    # examples: |
-      # - quero ir para o brasil
-      # - japao
-
-  # - intent: choose_country_japao
-    # examples: |
-      # - quero ir para o japao
-      # - japao
-
-  # - intent: inform_amount
-    # examples: |
-      # - quanto da [400](origin_coin)
-      # - quanto e [400](origin_coin)
-      # - quero [400](origin_coin)
-      # - converta esse valor [400](origin_coin)
-      # - quero converter [400](origin_coin)
-      # - Quero converter [200](origin_coin) reais ver como faz pra setar dolar, euro yen etc., no # final da frase.
+#  - intent: chitchat
+#    examples: |
+#      - isso não é o que eu quero fazer
+#      - espere, pare
+#      - você não está ajudando
+#      - isso não ajuda em nada
+#      - quantos anos você tem
+#      - eu quero pedir uma pizza
+#      - me diga o clima
+#      - isso não está funcionando
+#      - eu já te disse isso
+#      - não gosto disso
+#      - eu não quero te dizer isso
+#      - isso não é da sua conta
+#      - isso está errado
+#      - pare de perguntar
+#      - deixa pra lá
+#      - eu quero fazer outra coisa
+#      - eu mudei de ideia

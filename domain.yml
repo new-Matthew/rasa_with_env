@@ -13,6 +13,7 @@ intents:
   - inform_origin_country
   - inform_destiny_country
   - inform_origin_coin
+#  - chitchat
 
 entities:
   - origin_country
@@ -80,6 +81,10 @@ responses:
 
   utter_ask_origin_coin:
     - text: "Escreva a quantidade de dinheiro que deseja converter:"
+
+#  responses:
+#  utter_chitchat:
+#    - text: "Desculpe, eu não posso ajudar com isso agora."
 
 session_config:
   session_expiration_time: 60
