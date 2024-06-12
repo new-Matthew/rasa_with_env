@@ -106,16 +106,24 @@ nlu:
   - intent: inform_origin_country
     examples: |
       - [brasil](origin_country)
-      - estou na [alemanha](origin_country)
-      - estou nos [eua](origin_country)
+      - estou no [alemanha](origin_country)
+      - to no [eua](origin_country)
       - saindo do [paraguai](origin_country)
+      - moro no [canada](destiny_country)
+      - aqui é o [japao](destiny_country)
+      - estamos na [frança](destiny_country)
+      - vivo em [cuba](destiny_country)
 
   - intent: inform_destiny_country
     examples: |
-      - quero ir para o [canadá](destiny_country)
-      - chegar no [japão](destiny_country)
+      - quero ir para o [canada](destiny_country)
+      - chegar no [japao](destiny_country)
       - visitar a [frança](destiny_country)
       - [cuba](destiny_country)
+      - morar no [brasil](origin_country)
+      - ir ao [alemanha](origin_country)
+      - viajar para o [eua](origin_country)
+      - viver no [paraguai](origin_country)
 
   - intent: inform_origin_coin
     examples: |
