@@ -13,8 +13,8 @@ intents:
   - inform_origin_country
   - inform_destiny_country
   - inform_origin_coin
-#  - chitchat
   - ceares
+#  - chitchat
 
 entities:
   - origin_country
@@ -74,11 +74,11 @@ responses:
     - text: "Por favor, escolha seu país de origem:"
       buttons:
         - title: "canada"
-          payload: "/inform_destiny_country{\"destiny_country\": \"canada\"}"
+          payload: "/inform_origin_country{\"origin_country\": \"canada\"}"
         - title: "japao"
-          payload: "/inform_destiny_country{\"destiny_country\": \"japao\"}"
+          payload: "/inform_origin_country{\"origin_country\": \"japao\"}"
         - title: "frança"
-          payload: "/inform_destiny_country{\"destiny_country\": \"frança\"}"
+          payload: "/inform_origin_country{\"origin_country\": \"frança\"}"
         - title: "cuba"
           payload: "/inform_origin_country{\"origin_country\": \"cuba\"}"
         - title: "brasil"
@@ -100,39 +100,29 @@ responses:
         - title: "frança"
           payload: "/inform_destiny_country{\"destiny_country\": \"frança\"}"
         - title: "cuba"
-          payload: "/inform_origin_country{\"origin_country\": \"cuba\"}"
+          payload: "/inform_destiny_country{\"destiny_country\": \"cuba\"}"
         - title: "brasil"
-          payload: "/inform_origin_country{\"origin_country\": \"brasil\"}"
+          payload: "/inform_destiny_country{\"destiny_country\": \"brasil\"}"
         - title: "alemanha"
-          payload: "/inform_origin_country{\"origin_country\": \"alemanha\"}"
+          payload: "/inform_destiny_country{\"destiny_country\": \"alemanha\"}"
         - title: "eua"
-          payload: "/inform_origin_country{\"origin_country\": \"eua\"}"
+          payload: "/inform_destiny_country{\"destiny_country\": \"eua\"}"
         - title: "paraguai"
-          payload: "/inform_origin_country{\"origin_country\": \"paraguai\"}"
-
-  #utter_travel:
-  #  - text: "ei que bom, agora responda algumas perguntas para mim poder te ajudar melhor: "
-  #  - text: "boa, por favor responda as próximas perguntas: "
-
-#  utter_ask_origin_country:
-#    - text: "Qual país você está?"
-
-#  utter_ask_destiny_country:
-#    - text: "Para qual país deseja ir?"
+          payload: "/inform_destiny_country{\"destiny_country\": \"paraguai\"}"
 
   utter_ask_origin_coin:
     - text: "Escreva a quantidade de dinheiro que deseja converter:"
 
+  utter_ask_ceares:
+    - text: "ai dento cara de jumento"
+  
 #  responses:
 #  utter_chitchat:
 #    - text: "Desculpe, eu não posso ajudar com isso agora."
 
-  utter_ask_ceares:
-    - text: "ai dento cara de jumento"
-
 session_config:
   session_expiration_time: 60
-  carry_over_slots_to_new_session: false
+  carry_over_slots_to_new_session: true
 
 actions:
   - action_hello_world

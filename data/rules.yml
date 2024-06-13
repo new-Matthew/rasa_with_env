@@ -19,6 +19,11 @@ rules:
       - action: simple_form
       - active_loop: simple_form
 
+  - rule:
+    steps:
+      - intent: ceares
+      - action: utter_ask_ceares
+
   - rule: submit form
     condition:
       - active_loop: simple_form

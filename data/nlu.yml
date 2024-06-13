@@ -109,10 +109,10 @@ nlu:
       - estou no [alemanha](origin_country)
       - to no [eua](origin_country)
       - saindo do [paraguai](origin_country)
-      - moro no [canada](destiny_country)
-      - aqui é o [japao](destiny_country)
-      - estamos na [frança](destiny_country)
-      - vivo em [cuba](destiny_country)
+      - moro no [canada](origin_country)
+      - aqui é o [japao](origin_country)
+      - estamos na [frança](origin_country)
+      - vivo em [cuba](origin_country)
 
   - intent: inform_destiny_country
     examples: |
@@ -120,10 +120,10 @@ nlu:
       - chegar no [japao](destiny_country)
       - visitar a [frança](destiny_country)
       - [cuba](destiny_country)
-      - morar no [brasil](origin_country)
-      - ir ao [alemanha](origin_country)
-      - viajar para o [eua](origin_country)
-      - viver no [paraguai](origin_country)
+      - morar no [brasil](destiny_country)
+      - ir ao [alemanha](destiny_country)
+      - viajar para o [eua](destiny_country)
+      - viver no [paraguai](destiny_country)
 
   - intent: inform_origin_coin
     examples: |
@@ -133,6 +133,17 @@ nlu:
       - quero converter [400](origin_coin)
       - converta esse valor [400](origin_coin)
       - [400](origin_coin)
+
+  - intent: ceares
+    examples: |
+      - oxe
+      - ai dentro
+      - pega o beco
+      - abestado
+      - avia
+      - baba ovo
+      - vai pra baixa da egua
+
 
 #  - intent: chitchat
 #    examples: |
