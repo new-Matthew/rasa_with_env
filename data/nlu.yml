@@ -93,58 +93,66 @@ nlu:
   - intent: hello
     examples: |
       - hello
+      - Hello
       - world
+
+  - intent: piada
+    examples: |
+      - piada
+      - Piada
+
 
   - intent: travel
     examples: |
-      - quero viajar
-      - viajar
-      - vou sair para outro país
-      - quero ir para outro país
-      - quero sair do país
+     - quero viajar
+     - viajar
+     - vou sair para outro pais
+     - quero ir para outro pais
+     - quero sair do pais
+     - viagem
 
   - intent: inform_origin_country
     examples: |
-      - [brasil](origin_country)
-      - estou no [alemanha](origin_country)
-      - to no [eua](origin_country)
-      - saindo do [paraguai](origin_country)
-      - moro no [canada](origin_country)
-      - aqui é o [japao](origin_country)
-      - estamos na [frança](origin_country)
-      - vivo em [cuba](origin_country)
+     - [Brasil](origin_country)
+#     - estou no [México](origin_country)
+#     - to no [EUA](origin_country)
+#     - saindo do [Espanha](origin_country)
+#     - moro no [Portugal](origin_country)
+#     - aqui é o [Japão](origin_country)
+#     - estamos na [França](origin_country)
+#     - vivo em [Equador](origin_country)
 
   - intent: inform_destiny_country
     examples: |
-      - quero ir para o [canada](destiny_country)
-      - chegar no [japao](destiny_country)
-      - visitar a [frança](destiny_country)
-      - [cuba](destiny_country)
-      - morar no [brasil](destiny_country)
-      - ir ao [alemanha](destiny_country)
-      - viajar para o [eua](destiny_country)
-      - viver no [paraguai](destiny_country)
+     - quero ir para o [Espanha](destiny_country)
+     - chegar no [Japão](destiny_country)
+     - visitar a [França](destiny_country)
+     - [Portugal](destiny_country)
+     - ir ao [México](destiny_country)
+     - viajar para o [EUA](destiny_country)
+     - viver no [Equador](destiny_country)
 
-  - intent: inform_origin_coin
+  - intent: inform_origin_coin_to_convert
     examples: |
-      - quanto dá [400](origin_coin)
-      - quanto é [400](origin_coin)
-      - quero [400](origin_coin)
-      - quero converter [400](origin_coin)
-      - converta esse valor [400](origin_coin)
-      - [400](origin_coin)
+     - quanto dá [400](origin_coin_to_convert)
+     - quanto é [400](origin_coin_to_convert)
+     - quero [400](origin_coin_to_convert)
+     - quero converter [400](origin_coin_to_convert)
+     - converta esse valor [400](origin_coin_to_convert)
+     - [400](origin_coin_to_convert)
 
   - intent: ceares
     examples: |
-      - oxe
-      - ai dentro
-      - pega o beco
-      - abestado
-      - avia
-      - baba ovo
-      - vai pra baixa da egua
+     - oxe
+     - ai dentro
+     - pega o beco
+     - abestado
+     - avia
+     - baba ovo
+     - vai pra baixa da egua
 
 
+    
 #  - intent: chitchat
 #    examples: |
 #      - isso não é o que eu quero fazer

@@ -29,13 +29,19 @@ stories:
   - intent: deny
   - action: utter_happy
 
-#- story: ceares path
-#  steps:
-#  - intent: ceares
-#  - action: utter_ask_ceares
+- story: ceares path
+  steps:
+  - intent: ceares
+  - action: utter_ask_ceares
 
 
 - story: hello_world
   steps:
   - intent: hello
   - action: action_hello_world 
+
+- story: joke
+  steps:
+  - intent: piada
+  - action: action_joke 
+
